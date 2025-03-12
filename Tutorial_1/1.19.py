@@ -1,14 +1,15 @@
-n = int(input("Enter the number of elements: "))
+total_numbers = int(input("Enter the number of elements: "))
 
-even_count = 0
-odd_count = 0
+count_even = 0
+count_odd = 0
 
-for _ in range(n):
-    num = int(input("Enter a number: "))
-    if num % 2 == 0:
-        even_count += 1
+for _ in range(total_numbers):
+
+    value = int(input("Enter a number: "))
+    if value % 2 == 0:
+        count_even += 1
     else:
-        odd_count += 1
+        count_odd += 1
 
-print(f"Even numbers: {even_count}")
-print(f"Odd numbers: {odd_count}")
+print(f"Even numbers: {count_even}")
+print(f"Odd numbers: {count_odd}")
