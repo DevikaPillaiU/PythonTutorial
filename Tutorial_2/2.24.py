@@ -1,14 +1,12 @@
-"""Finding the mode of list of numbers(A number that appears most often is the
- mode.)"""
-
 from collections import Counter
 
-def find_mode(numbers):
-    freq = Counter(numbers)
-    max_count = max(freq.values())
-    mode = [num for num, count in freq.items() if count == max_count]
-    return mode
+def calc_mode(values):
+    freq_count = Counter(values)
+    max_occurrence = max(freq_count.values())
+    mode_values = [val for val, count in freq_count.items() if count == max_occurrence]
+    return mode_values
 
-n = int(input("Enter the number of elements: "))
-numbers = [int(input(f"Enter number {i+1}: ")) for i in range(n)]
-print(f"\nThe mode is: {find_mode(numbers)}")
+num_elements = int(input("Enter the number of elements: "))
+value_list = [int(input(f"Enter number {index+1}: ")) for index in range(num_elements)]
+
+print(f"\nThe mode is: {calc_mode(value_list)}")
