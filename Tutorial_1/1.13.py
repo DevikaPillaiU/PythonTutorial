@@ -1,16 +1,17 @@
-def reverse_number(n):
-    reversed_num = 0
+def reverse(n):
+    rev_num = 0
     
     while n > 0:
         digit = n % 10 
-        reversed_num = reversed_num * 10 + digit  
+        rev_num = rev_num * 10 + digit  
         n //= 10
     
-    return reversed_num
+    return rev_num
 
-num = int(input("Enter a number: "))
+number = int(input("Enter a number: "))
 
-if num < 0:
-    print(f"Reversed number: -{reverse_number(abs(num))}")
+if number < 0:
+    print(f"Reversed number: -{reverse(abs(number))}")
 else:
-    print(f"Reversed number: {reverse_number(num)}")
+    print(f"Reversed number: {reverse(number)}")
+
