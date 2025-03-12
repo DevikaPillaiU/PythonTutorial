@@ -7,7 +7,7 @@ def dec_to_bin(num):
     while num > 0:
         bin_str = str(num % 2) + bin_str  
         num = num // 2 
-        print(bin_str)  # Shows the step-by-step binary formation
+        print(bin_str) 
     
     return bin_str
 
