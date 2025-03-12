@@ -1,10 +1,10 @@
-def power(x, y):
+def exp(base, exponent):
     result = 1
-    for _ in range(y):
-        result *= x
+    for _ in range(exponent):
+        result *= base
     return result
 
-x = int(input("Enter the base (X): "))
-y = int(input("Enter the exponent (Y): "))
+base = int(input("Enter the base (X): "))
+exponent = int(input("Enter the exponent (Y): "))
 
-print(f"{x}^{y} = {power(x, y)}")
+print(f"{base}^{exponent} = {exp(base, exponent)}")
