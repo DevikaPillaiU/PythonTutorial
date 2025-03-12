@@ -1,12 +1,12 @@
-def prime_factors(n):
-    factor = 2
-    while n > 1:
-        if n % factor == 0:
-            print(factor, end=" ")
-            n //= factor
+def find_prime_factors(number):
+    divisor = 2
+    while number > 1:
+        if number % divisor == 0:
+            print(divisor, end=" ")
+            number //= divisor
         else:
-            factor += 1
+            divisor += 1
 
-num = int(input("Enter a number: "))
+input_number = int(input("Enter a number: "))
 print("Prime factors:", end=" ")
-prime_factors(num)
+find_prime_factors(input_number)
