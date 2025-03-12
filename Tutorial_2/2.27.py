@@ -1,23 +1,20 @@
-""" Write a Python program to read list of positive integers and separate the prime
- and composite numbers """
-
-def is_prime(n):
-    if n < 2:
+def check_prime(num):
+    if num < 2:
         return False
-    for i in range(2, int(n ** 0.5) + 1):
-        if n % i == 0:
+    for divisor in range(2, int(num ** 0.5) + 1):
+        if num % divisor == 0:
             return False
     return True
 
-def separate_prime_composite(lst):
-    primes = [x for x in lst if is_prime(x)]
-    composites = [x for x in lst if x > 1 and not is_prime(x)]
-    return primes, composites
+def classify_prime_composite(values):
+    prime_list = [x for x in values if check_prime(x)]
+    composite_list = [x for x in values if x > 1 and not check_prime(x)]
+    return prime_list, composite_list
 
-n = int(input("Enter the number of elements: "))
-numbers = [int(input(f"Enter positive integer {i+1}: ")) for i in range(n) if int(input(f"Enter positive integer {i+1}: ")) > 0]
+num_elements = int(input("Enter the number of elements: "))
+value_list = [int(input(f"Enter positive integer {index+1}: ")) for index in range(num_elements) if int(input(f"Enter positive integer {index+1}: ")) > 0]
 
-primes, composites = separate_prime_composite(numbers)
+primes, composites = classify_prime_composite(value_list)
 
 print(f"\nPrime numbers: {primes}")
 print(f"Composite numbers: {composites}")
