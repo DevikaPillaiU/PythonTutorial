@@ -1,8 +1,7 @@
-def fibonacci(n):
-    a, b = 0, 1 
+def fib(n):
+    x, y = 0, 1
     for _ in range(n):
-        print(a, end=" ") 
-        a, b = b, a + b  
+        print(x, end=" ")
+        x, y = y, x + y
 
-
-fibonacci(10)
+fib(10)
