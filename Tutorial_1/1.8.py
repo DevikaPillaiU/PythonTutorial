@@ -1,14 +1,14 @@
-def sum_of_digits(n):
-    n = abs(n)
-    total = 0
+def sod(number):
+    number = abs(number)
+    total_sum = 0
 
-    while n > 0:
-        digit = n % 10
-        total += digit
-        n = n // 10
+    while number > 0:
+        digit = number % 10
+        total_sum += digit
+        number //= 10
 
-    return total
+    return total_sum
 
 num = int(input("Enter a number: "))
 
-print(f"Sum of digits: {sum_of_digits(num)}")
+print(f"Sum of digits: {sod(num)}")
