@@ -1,6 +1,6 @@
-from math import*
+from math import sqrt
 
-def find_roots(a, b, c):
+def quad_roots(a, b, c):
     discriminant = b**2 - 4*a*c
 
     if discriminant > 0:
@@ -22,4 +22,4 @@ c = float(input("Enter coefficient c: "))
 if a == 0:
     print("Not a quadratic equation (a should not be zero).")
 else:
-    print(find_roots(a, b, c))
+    print(quad_roots(a, b, c))
