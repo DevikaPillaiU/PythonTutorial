@@ -1,34 +1,31 @@
-def sum_and_average(numbers):
-    pos_sum = 0  
-    neg_sum = 0  
-    pos_count = 0  
-    neg_count = 0 
+ def calculate_sums_and_averages(values):
+    positive_sum = 0  
+    negative_sum = 0  
+    positive_count = 0  
+    negative_count = 0
 
-    for num in numbers:
-        if num > 0:
-            pos_sum += num
-            pos_count += 1
-        elif num < 0:
-            neg_sum += num
-            neg_count += 1
+    for value in values:
+        if value > 0:
+            positive_sum += value
+            positive_count += 1
+        elif value < 0:
+            negative_sum += value
+            negative_count += 1
 
-   
-    pos_avg = pos_sum / pos_count if pos_count > 0 else 0
-    neg_avg = neg_sum / neg_count if neg_count > 0 else 0
+    positive_avg = positive_sum / positive_count if positive_count > 0 else 0
+    negative_avg = negative_sum / negative_count if negative_count > 0 else 0
 
-    return pos_sum, pos_avg, neg_sum, neg_avg
+    return positive_sum, positive_avg, negative_sum, negative_avg
 
 
-nums = []
+numbers = []
 for i in range(4):
-    num = int(input(f"Enter number {i+1}: "))
-    nums.append(num)
+    number = int(input(f"Enter number {i+1}: "))
+    numbers.append(number)
 
+positive_sum, positive_avg, negative_sum, negative_avg = calculate_sums_and_averages(numbers)
 
-pos_sum, pos_avg, neg_sum, neg_avg = sum_and_average(nums)
-
-
-print(f"Sum of positive numbers: {pos_sum}")
-print(f"Average of positive numbers: {pos_avg:.2f}")
-print(f"Sum of negative numbers: {neg_sum}")
-print(f"Average of negative numbers: {neg_avg:.2f}")
+print(f"Sum of positive numbers: {positive_sum}")
+print(f"Average of positive numbers: {positive_avg:.2f}")
+print(f"Sum of negative numbers: {negative_sum}")
+print(f"Average of negative numbers: {negative_avg:.2f}")
