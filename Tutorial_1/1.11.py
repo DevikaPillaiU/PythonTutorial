@@ -1,5 +1,5 @@
 
-def sum_of_even_powers(limit):
+def sumofc(limit):
     total = 0 
 
     for i in range(2, limit + 1, 2): 
@@ -12,4 +12,4 @@ num = int(input("Enter a positive integer: "))
 if num <= 0:
     print("Please enter a positive integer.")
 else:
-    print(f"Sum of cubes of even numbers up to {num}: {sum_of_even_powers(num)}")
+    print(f"Sum of cubes of even numbers up to {num}: {sumofc(num)}")
