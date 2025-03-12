@@ -16,6 +16,6 @@ elif discriminant == 0:
     print(f"One real and equal root: {root:.2f}")
 
 else:
-    real_part = -b / (2 * a)
-    imag_part = math.sqrt(abs(discriminant)) / (2 * a)
-    print(f"Two complex roots: {real_part:.2f} ± {imag_part:.2f}i")
+    real = -b / (2 * a)
+    imag = math.sqrt(abs(discriminant)) / (2 * a)
+    print(f"Two complex roots: {real:.2f} ± {imag:.2f}i")
