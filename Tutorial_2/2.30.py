@@ -1,6 +1,4 @@
-""" Remove duplicate elements from a list."""
-
-def remove_duplicates(lst):
+def rem_duplicates(lst):
     unique_list = []
     for item in lst:
         if item not in unique_list:
@@ -10,4 +8,4 @@ def remove_duplicates(lst):
 n = int(input("Enter the number of elements: "))
 numbers = [int(input(f"Enter number {i+1}: ")) for i in range(n)]
 
-print(f"\nList after removing duplicates: {remove_duplicates(numbers)}")
+print(f"\nList after removing duplicates: {remo_duplicates(numbers)}")
