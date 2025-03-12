@@ -1,14 +1,10 @@
-""" Program to find the sum of all even numbers in a group of n numbers entered
- by the user"""
+num_elements = int(input("Enter the number of elements: "))
 
-n = int(input("Enter the number of elements: "))
+sum_even = 0
 
-even_sum = 0
+for index in range(num_elements):
+    value = int(input(f"Enter number {index + 1}: "))
+    if value % 2 == 0:
+        sum_even += value
 
-for i in range(n):
-    num = int(input(f"Enter number {i+1}: "))
-    if num % 2 == 0:
-        even_sum += num
-
-# Display the result
-print(f"\nSum of all even numbers: {even_sum}")
+print(f"\nSum of all even numbers: {sum_even}")
