@@ -1,5 +1,5 @@
-n = int(input("Enter the value of n: "))
+n_value = int(input("Enter the value of n: "))
 
-result = 2**(2*n) + n + 5
+calculation_result = 2**(2*n_value) + n_value + 5
 
-print(f"Result: {result}")
+print(f"Calculation Result: {calculation_result}")
