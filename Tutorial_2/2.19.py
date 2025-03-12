@@ -1,14 +1,12 @@
-"""Write a Python program to print n’th Fibonacci number using recursion."""
-def fibonacci(n):
-    if n <= 0:
+def compute_fibonacci(position):
+    if position <= 0:
         return "Invalid input. Please enter a positive integer."
-    elif n == 1:
+    elif position == 1:
         return 0
-    elif n == 2:
+    elif position == 2:
         return 1
     else:
-        return fibonacci(n - 1) + fibonacci(n - 2)
+        return compute_fibonacci(position - 1) + compute_fibonacci(position - 2)
 
-# Example usage
-n = int(input("Enter the position (n) to find the Fibonacci number: "))
-print(f"The {n}th Fibonacci number is: {fibonacci(n)}")
+user_input = int(input("Enter the position (n) to find the Fibonacci number: "))
+print(f"The {user_input}th Fibonacci number is: {compute_fibonacci(user_input)}")
