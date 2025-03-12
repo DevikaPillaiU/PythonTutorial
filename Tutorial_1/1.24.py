@@ -1,10 +1,10 @@
-for num in range(100, 1001):
-    sum_of_digits = 0
-    n = num
+for number in range(100, 1001):
+    digit_sum = 0
+    temp = number
     
-    while n > 0:
-        sum_of_digits += n % 10
-        n //= 10
+    while temp > 0:
+        digit_sum += temp % 10
+        temp //= 10
 
-    if sum_of_digits % 9 == 0:
-        print(num, end=" ")
+    if digit_sum % 9 == 0:
+        print(number, end=" ")
