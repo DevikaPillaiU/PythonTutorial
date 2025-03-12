@@ -1,30 +1,25 @@
-"""Write a Python program to find the value for sin(x) up to n terms using the
- series
-   sin(x)=1-x^3/3!+x^5/5!..... ( sin(x) = ((-1)^n/(2n+1)!)x^(2n+1) )"""
-
-
 import math
 
-def factorial(n):
-    fact = 1
-    for i in range(1, n + 1):
-        fact *= i
-    return fact
+def compute_factorial(num):
+    fact_result = 1
+    for i in range(1, num + 1):
+        fact_result *= i
+    return fact_result
 
-def sin_series(x, n_terms):
-    sine_value = 0
+def sine_maclaurin_series(angle_rad, terms):
+    sine_approx = 0
     
-    for n in range(n_terms):
-        term = ((-1) ** n) * (x ** (2 * n + 1)) / factorial(2 * n + 1)
-        sine_value += term
+    for n in range(terms):
+        term = ((-1) ** n) * (angle_rad ** (2 * n + 1)) / compute_factorial(2 * n + 1)
+        sine_approx += term
 
-    return sine_value
+    return sine_approx
 
-x_degrees = float(input("Enter the value of x in degrees: "))
-n_terms = int(input("Enter the number of terms: "))
+angle_degrees = float(input("Enter the value of x in degrees: "))
+num_terms = int(input("Enter the number of terms: "))
 
-x_radians = math.radians(x_degrees)
+angle_radians = math.radians(angle_degrees)
 
-result = sin_series(x_radians, n_terms)
+result = sine_maclaurin_series(angle_radians, num_terms)
 
-print(f"sin({x_degrees}) ≈ {result}")
+print(f"sin({angle_degrees}) ≈ {result}")
