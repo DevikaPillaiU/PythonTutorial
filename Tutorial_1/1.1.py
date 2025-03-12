@@ -6,4 +6,4 @@ def convert_to_hms(total_seconds):
 
 total_seconds = int(input("Enter the time in seconds: "))
 formatted_time = convert_to_hms(total_seconds)
-print("Time in HH:MM:SS format", formatted_time)
+print("Time in HH:MM:SS format", formatted_time) 
