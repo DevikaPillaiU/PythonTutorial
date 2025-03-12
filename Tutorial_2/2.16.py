@@ -1,26 +1,21 @@
-""" Write a menu driven program to implement the following
- i)check even or odd
- ii)check number is positive negative or zero
- iii) generate factors of a number"""
-
-def check_even_odd(num):
-    if num % 2 == 0:
-        print(f"{num} is Even")
+def is_even_or_odd(value):
+    if value % 2 == 0:
+        print(f"{value} is Even")
     else:
-        print(f"{num} is Odd")
+        print(f"{value} is Odd")
 
-def check_number_type(num):
-    if num > 0:
-        print(f"{num} is Positive")
-    elif num < 0:
-        print(f"{num} is Negative")
+def number_sign(value):
+    if value > 0:
+        print(f"{value} is Positive")
+    elif value < 0:
+        print(f"{value} is Negative")
     else:
-        print(f"{num} is Zero")
+        print(f"{value} is Zero")
 
-def generate_factors(num):
-    print(f"Factors of {num}: ", end="")
-    for i in range(1, num + 1):
-        if num % i == 0:
+def find_factors(value):
+    print(f"Factors of {value}: ", end="")
+    for i in range(1, value + 1):
+        if value % i == 0:
             print(i, end=" ")
     print()
 
@@ -31,18 +26,18 @@ while True:
     print("3. Generate Factors of a Number")
     print("4. Exit")
 
-    choice = int(input("Enter your choice (1-4): "))
+    user_choice = int(input("Enter your choice (1-4): "))
 
-    if choice == 1:
-        num = int(input("Enter a number: "))
-        check_even_odd(num)
-    elif choice == 2:
-        num = int(input("Enter a number: "))
-        check_number_type(num)
-    elif choice == 3:
-        num = int(input("Enter a number: "))
-        generate_factors(num)
-    elif choice == 4:
+    if user_choice == 1:
+        user_input = int(input("Enter a number: "))
+        is_even_or_odd(user_input)
+    elif user_choice == 2:
+        user_input = int(input("Enter a number: "))
+        number_sign(user_input)
+    elif user_choice == 3:
+        user_input = int(input("Enter a number: "))
+        find_factors(user_input)
+    elif user_choice == 4:
         print("Exiting the program. Goodbye!")
         break
     else:
