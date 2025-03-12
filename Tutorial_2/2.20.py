@@ -1,15 +1,12 @@
-""" Program to read list of names and sort the list in alphabetical order"""
+num_names = int(input("Enter the number of names: "))
 
-n = int(input("Enter the number of names: "))
+name_list = []
+for index in range(num_names):
+    entered_name = input(f"Enter name {index + 1}: ")
+    name_list.append(entered_name)
 
-names = []
-for i in range(n):
-    name = input(f"Enter name {i+1}: ")
-    names.append(name)
-
-names.sort()
+name_list.sort()
 
 print("\nNames in alphabetical order:")
-for name in names:
-    print(name)
-    
+for sorted_name in name_list:
+    print(sorted_name)
