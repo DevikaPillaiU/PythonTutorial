@@ -23,3 +23,4 @@ angle_radians = math.radians(angle_degrees)
 result = sine_maclaurin_series(angle_radians, num_terms)
 
 print(f"sin({angle_degrees}) ≈ {result}")
+
