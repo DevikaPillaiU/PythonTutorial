@@ -1,5 +1,5 @@
-def remove_vowels(s):
-    return "".join(char for char in s if char.lower() not in "aeiou")
+def rem_vowels(text):
+    return "".join(character for character in text if character.lower() not in "aeiou")
 
-input_string = "Hello, World!"
-print("String after removing vowels:", remove_vowels(input_string))
+input_text = "Hello, World!"
+print("String after removing vowels:", rem_vowels(input_text))
