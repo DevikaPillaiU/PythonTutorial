@@ -1,23 +1,18 @@
-"""Write a python program to compute nCr using a factorial function."""
-
-
-def factorial(n):
-    if n == 0 or n == 1:
+def compute_factorial(num):
+    if num == 0 or num == 1:
         return 1
-    fact = 1
-    for i in range(2, n + 1):
-        fact *= i
-    return fact
+    fact_result = 1
+    for i in range(2, num + 1):
+        fact_result *= i
+    return fact_result
 
-def nCr(n, r):
-    if r > n:
+def combination(n_val, r_val):
+    if r_val > n_val:
         return "r cannot be greater than n"
     
-    return factorial(n) // (factorial(r) * factorial(n - r))
+    return compute_factorial(n_val) // (compute_factorial(r_val) * compute_factorial(n_val - r_val))
 
-# Get user input
-n = int(input("Enter value of n: "))
-r = int(input("Enter value of r: "))
+n_input = int(input("Enter value of n: "))
+r_input = int(input("Enter value of r: "))
 
-# Compute and print nCr
-print(f"nCr ({n}C{r}) = {nCr(n, r)}")
+print(f"nCr ({n_input}C{r_input}) = {combination(n_input, r_input)}")
