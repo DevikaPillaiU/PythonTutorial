@@ -1,33 +1,25 @@
-"""Write a Python program to check the validity of a password given by the user
-11. The Password should satisfy the following criteria:
-1. Contains at least one letter between a and z
-2. Contains at least one number between 0 and 9
-3. Contains at least one letter between A and Z
-4. Contains at least one special character from $, #, @
-Minimum length of password: 6"""
+pwd = input("Enter the password: ")
+has_upper = False
+has_lower = False
+has_digit = False
+has_special = False
+special_chars = "$@#"
 
-s=input("Enter the passsword ")
-hasupper=False
-haslower=False
-hasdigit=False
-hasspecial=False
-specialChar="$@#"
+if len(pwd) >= 6:
+    for ch in pwd:
+        if ch.islower():
+            has_lower = True
+        elif ch.isupper():
+            has_upper = True
+        elif ch.isdigit():
+            has_digit = True
+        elif ch in special_chars:
+            has_special = True
 
-if(len(s)>=6):
-    for i in s:
-        if i.islower():
-            haslower=True
-        elif i.isupper():
-              hasupper=True
-        elif i.isdigit():
-              hasdigit=True
-        elif i in specialChar:
-            hasspecial=True
-
-    if hasupper and haslower and hasdigit and hasspecial:
-         print(" Pasword is vlaid")
+    if has_upper and has_lower and has_digit and has_special:
+        print("Password is valid")
     else:
-         print("Invalid password")
+        print("Invalid password")
 
 else:
-    print("invalid password")                        
+    print("Invalid password")
